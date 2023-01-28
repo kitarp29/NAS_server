@@ -15,13 +15,19 @@ app.get('/', (req, res) => {
 })
 
 app.post('/submit', (req, res) => {
-    console.log(req.body);
-    console.log(req.headers['x-forwarded-for']);
-  const rs = {
-     username: req.body.email,
-  password: req.body.password
+
+
+     var username= req.body.email;
+  var password = req.body.password;
+  var ipAddress= req.headers['x-forwarded-for'];
+
+  if(ipAddress=="" && username=="test@gmail.com" && password=="1234"){
+  res.redirect("YHA LINK HOGA JISPE REDIRECT KARNA HAI");
   }
-  res.send(rs);
+  else
+  {
+    res.send("Invalid Credentials");
+  }
 
 })
 

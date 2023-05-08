@@ -28,7 +28,7 @@ app.get('/', (req, res) => {
 app.post('/login', (req, res) => {
   var username= req.body.email;
   var password = req.body.password;
-  var ipAddress= req.headers['x-forwarded-for'];
+  // var ipAddress= req.headers['x-forwarded-for'];
 
   if(username=="test@gmail.com" && password=="1234"){
     res.sendFile(path.join(__dirname, '/page2.html'));
@@ -42,6 +42,10 @@ app.post('/login', (req, res) => {
 
 app.post('/read', (req, res) => {
   res.redirect("YHA LINK HOGA JISPE REDIRECT KARNA HAI");
+})
+
+app.post('/readByMobile', (req, res) => {
+  res.send("YHA LINK HOGA JISPE REDIRECT KARNA HAI");
 })
 
 app.post('/write', upload.single('myFile'), (req, res) => {

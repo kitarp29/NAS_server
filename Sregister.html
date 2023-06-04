@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register Page</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+  <style>
+    /* Add your custom styles here */
+    .container {
+      max-width: 400px;
+    }
+  </style>
+
+</head>
+<body>
+    <header class="bg-blue-600 py-4">
+        <div class="container mx-auto">
+          <h1  href="index.html" class="text-white text-2xl font-bold">Private Cloud Storage</h1>
+        </div>
+      </header>
+      <div>
+        <img  class="logo" src="dscelogo_2.jpeg" alt="Logo" style="display: block; margin: auto;">
+      </div>
+  <div class="min-h-screen flex items-center justify-center bg-gray-100">
+    <div class="container mx-auto p-6 bg-white rounded-lg shadow-lg">
+      <h1 class="text-2xl font-semibold mb-6 text-center">Register</h1>
+      <form action="/emailregister" method="post">
+        <div class="mb-4">
+          <label for="name" class="block text-gray-700 text-sm font-bold mb-2">Username:</label>
+          <input type="text" id="username" name="name" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+        </div>
+        <div class="mb-4">
+          <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Email:</label>
+          <input type="email" id="email" name="email" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+        </div>
+        <div class="mb-4">
+          <label for="password" class="block text-gray-700 text-sm font-bold mb-2">Password:</label>
+          <input type="password" id="password" name="password" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+        </div>
+        <div class="mb-6">
+          <label for="confirmPassword" class="block text-gray-700 text-sm font-bold mb-2">Confirm Password:</label>
+          <input type="password" id="confirmPassword" name="confirmPassword" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+        </div>
+        <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">Register</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
